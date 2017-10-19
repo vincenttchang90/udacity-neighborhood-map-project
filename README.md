@@ -4,7 +4,7 @@ Udacity Neighborhood Map Project - By: Vincent Chang
     Clicking on each marker will animate said marker and open an info window containing
     important information about each casino. In the future I would like to have the user
     input their location or have the device get the location and populate a map
-    with nearby casinos.
+    with nearby casinos. I used Google Maps API and Foursquare API.
 
 Getting Started
 
