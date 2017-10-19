@@ -126,7 +126,7 @@ var Casino = function(data) {
             currentInfoWindow.open(map, this);
         }
 
-        map.panTo(self.marker.getPosition())
+        map.panTo(self.marker.getPosition());
         
         self.marker.setAnimation(google.maps.Animation.BOUNCE);
         setTimeout(function() {
@@ -153,6 +153,7 @@ function viewModel() {
     });
     map.fitBounds(bounds);
 
+    //help from stackoverflow
     this.filteredList = ko.computed( function() {
         if (currentInfoWindow !== undefined) {
             currentInfoWindow.close();
