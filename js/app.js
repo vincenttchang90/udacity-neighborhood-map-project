@@ -147,9 +147,9 @@ function viewModel() {
 
     var bounds = new google.maps.LatLngBounds();
 
-    casinos.forEach(function(locationItem){
-        bounds.extend(locationItem.location);
-        self.locationList.push( new Casino(locationItem));
+    casinos.forEach(function(casino){
+        bounds.extend(casino.location);
+        self.locationList.push( new Casino(casino));
     });
     map.fitBounds(bounds);
 
@@ -159,17 +159,17 @@ function viewModel() {
         }
         var filter = self.searchTerm().toLowerCase();
         if(!filter){
-            self.locationList().forEach(function(locationItem){
-                locationItem.visible(true);
-                locationItem.marker.setVisible(true);
+            self.locationList().forEach(function(item){
+                item.visible(true);
+                item.marker.setVisible(true);
             });
             return self.locationList();
         } else {
-            return ko.utils.arrayFilter(self.locationList(), function(locationItem) {
-                var string = locationItem.name.toLowerCase();
+            return ko.utils.arrayFilter(self.locationList(), function(item) {
+                var string = item.name.toLowerCase();
                 var result = (string.search(filter) >= 0);
-                locationItem.visible(result);
-                locationItem.marker.setVisible(result);
+                item.visible(result);
+                item.marker.setVisible(result);
                 return result;
             });
         }
