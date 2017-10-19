@@ -12,6 +12,7 @@ body {
 	height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	background-color: #ccc;
 }
 
 .container-right {
@@ -41,10 +42,44 @@ body {
 .casinos {
     margin: 10px;
     padding: 10px;
+    color: #fff;
+    background-color: #2B2B2B;
+    cursor: pointer;
+    text-align: center;
 }
 
 h1 {
 	padding-left: 10px;
-	margin: 10px
+	margin: 10px;
+	text-align: center;
 }
 
+@media screen and (max-width: 1000px) {
+	.container-left {
+		flex: 1;
+	}
+
+	.container-right {
+		flex: 3;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.container-left {
+		flex: 1;
+	}
+
+	.container-right {
+		flex: 2;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container-left {
+		flex: 1;
+	}
+
+	.container-right {
+		flex: 1;
+	}
+}
